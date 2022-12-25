@@ -1,11 +1,10 @@
 name: github pages
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_run:
+    workflows: ["Submodules Sync"]
+    types:
+      - completed
 
 jobs:
   deploy:
@@ -19,7 +18,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 0.104.3
+          hugo-version: 'latest'
           # extended: true
 
       - name: Build
@@ -29,5 +28,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
         with:
-          github_token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.token }}
           publish_dir: ./public
