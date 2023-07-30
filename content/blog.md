@@ -3,7 +3,7 @@ title = "Blog"
 slug = "blog"
 +++
 
-Hey ! It seems you are interested in reading what I have written. You can visit my [Medium](https://medium.com/@2019s17581) profile. Also I'm dropping few links of my work here, so you can enjoy the read !
+Hey! It seems you are interested in reading what I have written. You can visit my [Medium](https://medium.com/@2019s17581) profile. Also, I'm dropping a few links to my work here so that you can enjoy the read!
 
 1. [Bioinformatics in Plant Science](https://fos.cmb.ac.lk/mbl/bioinformatics-in-plant-science/)
 2. [Rêves(Dreams), into a French world](https://uocfosrotaract.com/2022/05/31/revesdreams-into-a-french-world/)
