@@ -142,7 +142,7 @@ weight = 2
 url = "blog/"
 
 [[languages.en.menu.main]]
-name = "Projects"
+name = "Experiences"
 weight = 3
 url = "experience/"
 
