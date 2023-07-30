@@ -1,7 +1,7 @@
 +++
 title = "About"
 description = "Mohamed Izad is an undergradurate, graphic designer and a developer."
-date = "2023-07-31"
+date = "2023-06-30"
 aliases = ["about-us", "about-izad", "contact"]
 author = "Mohamed Izad"
 +++
