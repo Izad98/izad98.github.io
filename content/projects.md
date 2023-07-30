@@ -1,16 +1,13 @@
 +++
-title = "Projects"
-slug = "projects"
+title = "Experience"
+slug = "Experience"
 +++
 
-The projects I have worked for in past few years during my undergraduates studies.
+My Experience differs from different disciplines including programming to Molecular Biology.
 
-1. Project SAFE
-2. [Project Microbio](https://microbio.netlify.app/)
-2. Project Healthlab
-3. Project Ralithi
-4. Project SVM Modelling
-
-Projects I worked on [Fiverr](https://www.fiverr.com/izadijaz) as a Freelancer
-1. Building a Marketplace Website from Wordpress
-2. Helping in Cryptography coding project
+1. I'm working on collaborative research on the Isolation of Monascus fungi from different rice varieties in Sri Lanka.
+2. I'm working as a Human Resources Manager and a Web - Content Writer at [IDER Solutions PVT LTD](https://idersolutions.com/).
+3. I've contributed to the project [Microbio](https://microbio.netlify.app/) as a content specialist, web developer as well as a graphic designer.
+4. I've worked on multiple projects including front-end development with modelling
+          [SVM Modelling](https://github.com/Izad98/SVM_modelling.git)
+          [Health lab](https://github.com/Izad98/HealthLab.git)
