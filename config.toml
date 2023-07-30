@@ -15,7 +15,7 @@ disqusShortname = "yourdiscussshortname"
 author = "Mohamed Izad"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Mohamed Izad's Portfolio"
-keywords = "mohamed izad,blog,molecular biologist, developer, graphic designer"
+keywords = "mohamed izad,blog,molecular biologist, developer, graphic designer, web content writer"
 info = ["Molecular Biology Undergraduate","Graphic Designer", "Developer"]
 avatarURL = "images/izad.png"
 #gravatar = "images/izad.png"
@@ -144,7 +144,7 @@ url = "blog/"
 [[languages.en.menu.main]]
 name = "Experiences"
 weight = 3
-url = "experience/"
+url = "experiences/"
 
 [[languages.en.menu.main]]
 name = "Contact me"
