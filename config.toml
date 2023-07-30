@@ -144,7 +144,7 @@ url = "blog/"
 [[languages.en.menu.main]]
 name = "Projects"
 weight = 3
-url = "projects/"
+url = "experience/"
 
 [[languages.en.menu.main]]
 name = "Contact me"
