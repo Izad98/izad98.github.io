@@ -1,6 +1,6 @@
 +++
-title = "Experience"
-slug = "experience"
+title = "Experiences"
+slug = "experiences"
 +++
 
 My Experience differs from different disciplines, including programming to Molecular Biology.
