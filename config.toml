@@ -16,7 +16,7 @@ author = "Mohamed Izad"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Mohamed Izad's Portfolio"
 keywords = "mohamed izad,blog,molecular biologist, developer, graphic designer, web content writer"
-info = ["Molecular Biology Undergraduate","Graphic Designer", "Developer"]
+info = ["Molecular Biology Undergraduate","Freelancer"]
 avatarURL = "images/izad.png"
 #gravatar = "images/izad.png"
 dateFormat = "January 2, 2006"
