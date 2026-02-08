@@ -95,4 +95,36 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetTab) targetTab.classList.add('active');
         });
     });
+
+    /**
+     * Mobile navigation toggle
+     * On small screens, the nav menu is hidden off-screen and toggled via
+     * the hamburger button. When the button is clicked, we toggle an
+     * 'open' class on both the menu and the button itself to trigger
+     * CSS transitions that slide the menu in and transform the icon
+     * into a close (X) symbol. Clicking any nav link will close the menu.
+     */
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (navToggle && navMenu) {
+        const body = document.body;
+        navToggle.addEventListener('click', () => {
+            const isOpen = navToggle.classList.toggle('open');
+            navMenu.classList.toggle('open');
+            /* Prevent background scrolling when the menu is open */
+            if (isOpen) {
+                body.classList.add('menu-open');
+            } else {
+                body.classList.remove('menu-open');
+            }
+        });
+        // Close the menu when a nav link is clicked (use event delegation)
+        navMenu.addEventListener('click', (event) => {
+            if (event.target.classList.contains('nav-link')) {
+                navToggle.classList.remove('open');
+                navMenu.classList.remove('open');
+                body.classList.remove('menu-open');
+            }
+        });
+    }
 });
