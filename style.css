@@ -1,0 +1,578 @@
+/*
+ * Custom styles for Mohamed Izad's portfolio.
+ * This stylesheet is inspired by modern personal portfolios with
+ * a dark theme and purple accent. It defines a consistent
+ * colour palette, responsive layouts and interactive elements
+ * such as tabbed content and animated buttons. The design
+ * takes cues from the provided reference website while
+ * reflecting Mohamed's professional profile.
+ */
+
+/* Colour palette */
+:root {
+    --bg-primary: #0a0a0f;         /* main background */
+    --bg-secondary: #14141f;       /* card and secondary backgrounds */
+    --text-primary: #e5e5e5;       /* primary text colour */
+    --text-muted: #8a8a9c;         /* muted text colour */
+    --accent: #8b5cf6;             /* primary accent (purple) */
+    --accent-light: #a78bfa;       /* lighter accent for hover */
+    --border-colour: #2c2c38;      /* subtle border colour */
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: var(--accent-light);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Utility classes */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.section {
+    padding: 100px 0;
+}
+.section-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    position: relative;
+}
+.section-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 10px;
+}
+
+/* Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 15, 0.95);
+    border-bottom: 1px solid var(--border-colour);
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+.brand {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+.nav-link {
+    display: block;
+    padding: 8px 20px;
+    border: 1px solid var(--border-colour);
+    border-radius: 50px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.nav-link:hover {
+    background: var(--accent);
+    color: #fff;
+}
+.nav-link.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 120px;
+    background: var(--bg-primary);
+}
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 80px;
+    }
+}
+.hero-content {
+    flex: 1;
+}
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .hero-name {
+        font-size: 4rem;
+    }
+}
+.hero-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    min-height: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: baseline;
+}
+.hero-title #cursor {
+    margin-left: 5px;
+    color: var(--accent);
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+.hero-description {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;
+}
+.btn-primary {
+    background: var(--accent);
+    color: #fff;
+}
+.btn-primary:hover {
+    background: var(--accent-light);
+}
+.btn-secondary {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+.btn-secondary:hover {
+    background: var(--accent);
+    color: #fff;
+}
+.hero-image-wrapper {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* Removed the purple border and brightness to blend the hero image with the background. */
+    border: none;
+    filter: none;
+    position: relative;
+    z-index: 1;
+}
+.hero-image-wrapper::before {
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    /* Use a subtle background glow instead of the purple accent to avoid a colored halo. */
+    background: radial-gradient(circle at 30% 30%, var(--bg-secondary) 0%, transparent 60%);
+    opacity: 0.3;
+    z-index: 0;
+}
+@media (min-width: 992px) {
+    .hero-image {
+        width: 360px;
+        height: 360px;
+    }
+    .hero-image-wrapper::before {
+        width: 420px;
+        height: 420px;
+    }
+}
+
+/* About Section */
+.about-section {
+    background: var(--bg-secondary);
+}
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .about-grid {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+.about-photo img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    /* Soften the portrait border in the About section to blend with the dark theme. */
+    border: 3px solid var(--border-colour);
+}
+.about-content {
+    flex: 1;
+}
+.about-content p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+.about-list {
+    list-style: none;
+    margin-top: 20px;
+}
+.about-list li {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+.about-list strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* Tabs */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+.tab-button {
+    padding: 8px 20px;
+    border-radius: 50px;
+    border: 1px solid var(--border-colour);
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.tab-button:hover {
+    background: var(--accent);
+    color: #fff;
+}
+.tab-button.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+}
+.tab {
+    display: none;
+}
+.tab.active {
+    display: block;
+}
+
+/* Timeline for Experience & Education */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.timeline-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-colour);
+    border-left: 4px solid var(--accent);
+    padding: 20px 25px;
+    border-radius: 8px;
+    position: relative;
+}
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+.timeline-item h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+.timeline-item h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.timeline-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.timeline-item ul li {
+    margin-bottom: 6px;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.skill-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-colour);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+.skill-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Projects Section */
+.projects-section {
+    background: var(--bg-secondary);
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+.project-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-colour);
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+}
+.project-tag {
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+.project-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+.project-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+.project-description {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Awards Section */
+.awards-section {
+    background: var(--bg-primary);
+}
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+.award-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-colour);
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s ease;
+}
+.award-card:hover {
+    transform: translateY(-5px);
+}
+.award-date {
+    font-size: 0.8rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+}
+.award-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-primary);
+}
+.award-body {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--bg-secondary);
+}
+.contact-intro {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.contact-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-colour);
+    border-radius: 8px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+.contact-icon {
+    font-size: 2rem;
+    color: var(--accent);
+}
+.contact-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+.contact-info p a {
+    color: var(--accent);
+    font-weight: 500;
+}
+.contact-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* Social media links in the Contact section
+   Centre the icons horizontally and reduce their size so they don't
+   dominate the layout. Each icon is wrapped in a circular button
+   with subtle hover interactions. */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-colour);
+    color: var(--accent);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.social-link:hover {
+    background: var(--accent);
+    color: #fff;
+}
+.social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-primary);
+    padding: 30px 0;
+    border-top: 1px solid var(--border-colour);
+    text-align: center;
+}
+.footer-container {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
