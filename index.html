@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+# Increase timeout / use retry logic
+import anthropic
+import time
+
+client = anthropic.Anthropic()
+
+for attempt in range(3):
+    try:
+        with client.messages.stream(
+            model="claude-sonnet-4-6",
+            max_tokens=4096,
+            messages=[{"role": "user", "content": "..."}],
+            timeout=600,  # increase timeout (seconds)
+        ) as stream:
+            for text in stream.text_stream:
+                print(text, end="", flush=True)
+        break  # success, exit retry loop
+    except Exception as e:
+        if attempt < 2:
+            time.sleep(2 ** attempt)  # exponential backoff
+        else:
+            raise
+   
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
