@@ -524,6 +524,22 @@ img { max-width: 100%; height: auto; display: block; }
   line-height: 1.75;
   transition: color 0.4s;
 }
+.project-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 2px;
+  transition: color 0.4s, border-color 0.4s;
+}
+.project-card:hover .project-link {
+  color: var(--black);
+  border-color: rgba(0,0,0,0.25);
+}
 
 /* ── Awards ────────────────────────────────── */
 .awards-section { background: var(--carbon); }
