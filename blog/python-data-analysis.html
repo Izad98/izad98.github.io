@@ -61,6 +61,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<div id="reading-progress"></div>
 
   <!-- Custom Cursor -->
   <div id="cursor-dot"></div>
@@ -92,6 +93,7 @@
 
     <!-- Hero -->
     <div class="article-hero" style="background: linear-gradient(135deg, #001020 0%, #001535 60%, #001020 100%);">
+      <img class="article-hero-bg" src="https://picsum.photos/seed/python-code/1600/900" alt="Python data analysis programming" loading="eager">
       <div class="container">
         <div class="article-hero-content reveal">
           <span class="article-hero-tag">Python · Data Science</span>
@@ -133,19 +135,14 @@
           <h2>A Practical Data Analysis Workflow</h2>
           <p>A well-structured Python data analysis workflow typically follows five stages. First, <em>data acquisition</em>: loading raw data from files, APIs, or databases using pandas or libraries such as <code>requests</code>, <code>sqlalchemy</code>, or <code>boto3</code> for cloud storage. Second, <em>exploratory data analysis (EDA)</em>: using <code>df.info()</code>, <code>df.describe()</code>, and Seaborn distribution plots to understand data types, ranges, distributions, and missing-value patterns before committing to any analytical path. Third, <em>data cleaning and feature engineering</em>: handling nulls, encoding categorical variables, normalising numerical features, and constructing domain-informed derived columns that improve model performance. Fourth, <em>modelling or statistical analysis</em>: fitting models with scikit-learn or performing hypothesis tests with <code>scipy.stats</code>, with rigorous cross-validation to avoid overfitting. Fifth, <em>communication</em>: producing clear visualisations in Matplotlib or Seaborn and narrating findings in a Jupyter notebook that serves as a reproducible, shareable analytical record. Mastering this workflow — rather than any single library — is the true skill of a Python data analyst, and it is a skill that translates directly to measurable business and research impact.</p>
 
-          <!-- CTA -->
-          <div class="article-cta reveal">
-            <p>This article was originally published on Medium. Read the full version with code examples and further resources.</p>
-            <a href="https://medium.com/@2019s17581/python-a-powerful-tool-for-data-analysis-fa942d61a848" class="btn btn-primary" target="_blank" rel="noopener">Read on Medium →</a>
-          </div>
-
           <!-- Author -->
           <div class="article-author reveal">
-            <div class="article-author-info">
-              <h4>Mohamed Izad</h4>
-              <p>Quality Analyst at Hemas Manufacturing · B.Sc. Molecular Biology &amp; Biotechnology, University of Colombo · Data practitioner and writer on Python, data science, and biotechnology.</p>
-            </div>
-          </div>
+  <div class="article-author-info">
+    <p class="article-hero-tag" style="margin-bottom:8px;">About the Author</p>
+    <h4>Mohamed Izad</h4>
+    <p>Quality Analyst at Hemas Manufacturing · B.Sc. Molecular Biology &amp; Biotechnology, University of Colombo. Writing on biotechnology, AI, and data science.</p>
+  </div>
+</div>
 
         </div>
       </div>
@@ -157,7 +154,9 @@
         <p class="section-label">More Articles</p>
         <div class="blog-grid" style="margin-top: 40px;">
           <article class="blog-card">
-            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #1a0f00 0%, #2a1800 60%, #1a1000 100%);">
+            <div class="blog-card-thumb">
+              <img src="https://picsum.photos/seed/ai-nlp-chat/800/420" alt="AI · NLP" loading="lazy">
+              <div class="blog-card-overlay"></div>
               <span class="blog-card-tag">AI · NLP</span>
             </div>
             <div class="blog-card-body">
@@ -167,7 +166,9 @@
             </div>
           </article>
           <article class="blog-card">
-            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #001520 0%, #002030 60%, #001020 100%);">
+            <div class="blog-card-thumb">
+              <img src="https://picsum.photos/seed/ai-genomics/800/420" alt="AI &amp; Genetics" loading="lazy">
+              <div class="blog-card-overlay"></div>
               <span class="blog-card-tag">AI &amp; Genetics</span>
             </div>
             <div class="blog-card-body">

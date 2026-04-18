@@ -61,6 +61,7 @@
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+<div id="reading-progress"></div>
 
   <!-- Custom Cursor -->
   <div id="cursor-dot"></div>
@@ -92,6 +93,7 @@
 
     <!-- Hero -->
     <div class="article-hero" style="background: linear-gradient(135deg, #001520 0%, #002030 60%, #001020 100%);">
+      <img class="article-hero-bg" src="https://picsum.photos/seed/ai-genomics/1600/900" alt="AI and genetics research" loading="eager">
       <div class="container">
         <div class="article-hero-content reveal">
           <span class="article-hero-tag">AI · Genomics · Biotechnology</span>
@@ -133,19 +135,14 @@
           <h2>Ethical and Practical Challenges</h2>
           <p>Despite its remarkable promise, the intersection of AI and genetics raises serious ethical and practical challenges that demand careful attention. Genetic data is among the most sensitive categories of personal information: it is immutable, inheritable, and capable of revealing not only an individual's health predispositions but also those of their biological relatives. The aggregation of large genomic datasets — necessary for training robust models — creates significant privacy risks, particularly as re-identification techniques grow more sophisticated. A further concern is representational bias: most large genomic datasets have historically overrepresented individuals of European ancestry, meaning that models trained on them perform less accurately for populations of African, Asian, or Indigenous descent. This disparity risks exacerbating existing health inequities unless addressed through deliberate and sustained investment in diverse data collection. Finally, the interpretability of deep learning models in genomics remains a challenge — clinicians and patients need to be able to understand and trust the basis for AI-generated risk predictions before those predictions can responsibly inform medical decisions.</p>
 
-          <!-- CTA -->
-          <div class="article-cta reveal">
-            <p>This article was originally published on Medium. Read the full version with additional references and figures.</p>
-            <a href="https://medium.com/@2019s17581/artificial-intelligence-and-genetics-f86703ba48f4" class="btn btn-primary" target="_blank" rel="noopener">Read on Medium →</a>
-          </div>
-
           <!-- Author -->
           <div class="article-author reveal">
-            <div class="article-author-info">
-              <h4>Mohamed Izad</h4>
-              <p>Quality Analyst at Hemas Manufacturing · B.Sc. Molecular Biology &amp; Biotechnology, University of Colombo · Writer on biotechnology, AI, and precision science.</p>
-            </div>
-          </div>
+  <div class="article-author-info">
+    <p class="article-hero-tag" style="margin-bottom:8px;">About the Author</p>
+    <h4>Mohamed Izad</h4>
+    <p>Quality Analyst at Hemas Manufacturing · B.Sc. Molecular Biology &amp; Biotechnology, University of Colombo. Writing on biotechnology, AI, and data science.</p>
+  </div>
+</div>
 
         </div>
       </div>
@@ -157,7 +154,9 @@
         <p class="section-label">More Articles</p>
         <div class="blog-grid" style="margin-top: 40px;">
           <article class="blog-card">
-            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #0b0020 0%, #1a063a 60%, #0e1038 100%);">
+            <div class="blog-card-thumb">
+              <img src="https://picsum.photos/seed/crispr-editing/800/420" alt="CRISPR · Gene Therapy · Biotechnology" loading="lazy">
+              <div class="blog-card-overlay"></div>
               <span class="blog-card-tag">CRISPR · Gene Therapy · Biotechnology</span>
             </div>
             <div class="blog-card-body">
@@ -167,7 +166,9 @@
             </div>
           </article>
           <article class="blog-card">
-            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2a 60%, #0f1420 100%);">
+            <div class="blog-card-thumb">
+              <img src="https://picsum.photos/seed/data-privacy/800/420" alt="Data Ethics · Technology" loading="lazy">
+              <div class="blog-card-overlay"></div>
               <span class="blog-card-tag">Data Ethics · Technology</span>
             </div>
             <div class="blog-card-body">

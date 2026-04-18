@@ -1,6 +1,21 @@
 // Mohamed Izad Portfolio — script.js
 // Three.js sphere · custom cursor · scroll reveals · loading screen
 
+// ── 0. Reading Progress Bar ─────────────────
+(function initReadingProgress() {
+  const bar = document.getElementById('reading-progress');
+  if (!bar) return;
+  function update() {
+    const body   = document.body;
+    const html   = document.documentElement;
+    const total  = Math.max(body.scrollHeight, html.scrollHeight) - window.innerHeight;
+    const pct    = total > 0 ? (window.scrollY / total) * 100 : 0;
+    bar.style.width = Math.min(pct, 100) + '%';
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+})();
+
 // ── 1. Loading Screen ───────────────────────
 const loadingScreen  = document.getElementById('loading-screen');
 const loaderProgress = document.getElementById('loader-progress');
