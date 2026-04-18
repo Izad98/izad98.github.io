@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../assets/Logo.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Python: A Powerful Tool for Data Analysis | Mohamed Izad</title>
+  <meta name="description" content="A practical overview of Python's capabilities for data analysis — covering pandas, NumPy, Matplotlib, and machine learning workflows. Written by Mohamed Izad, Quality Analyst and data practitioner.">
+  <meta name="keywords" content="Python data analysis, pandas, NumPy, data science Python, Python tutorial, data visualization Python">
+  <meta name="author" content="Mohamed Izad">
+  <link rel="canonical" href="https://izad98.github.io/blog/python-data-analysis.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         content="https://izad98.github.io/blog/python-data-analysis.html">
+  <meta property="og:title"       content="Python: A Powerful Tool for Data Analysis">
+  <meta property="og:description" content="A practical overview of Python's capabilities for data analysis — covering pandas, NumPy, Matplotlib, and machine learning workflows. Written by Mohamed Izad.">
+  <meta property="og:image"       content="https://izad98.github.io/assets/hero-profile.png">
+  <meta property="article:published_time" content="2022-12-24">
+  <meta property="article:author"         content="Mohamed Izad">
+  <meta property="article:tag"            content="Python, Data Science, pandas, NumPy, Machine Learning, Data Visualisation">
+
+  <!-- Schema.org BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Python: A Powerful Tool for Data Analysis",
+    "description": "A practical overview of Python's capabilities for data analysis — covering pandas, NumPy, Matplotlib, and machine learning workflows.",
+    "datePublished": "2022-12-24",
+    "dateModified": "2022-12-24",
+    "url": "https://izad98.github.io/blog/python-data-analysis.html",
+    "inLanguage": "en",
+    "keywords": "Python data analysis, pandas, NumPy, data science Python, Python tutorial, data visualization Python",
+    "articleSection": "Data Science",
+    "timeRequired": "PT6M",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Izad",
+      "url": "https://izad98.github.io",
+      "jobTitle": "Quality Analyst",
+      "alumniOf": "University of Colombo"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Mohamed Izad",
+      "url": "https://izad98.github.io"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://izad98.github.io/blog/python-data-analysis.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MI.</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#journey" class="nav-link">Journey</a></li>
+        <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="../index.html#awards" class="nav-link">Awards</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="article-hero" style="background: linear-gradient(135deg, #001020 0%, #001535 60%, #001020 100%);">
+      <div class="container">
+        <div class="article-hero-content reveal">
+          <span class="article-hero-tag">Python · Data Science</span>
+          <h1 class="article-hero-title">Python: A Powerful Tool for Data Analysis</h1>
+          <div class="article-hero-meta">
+            <span>Mohamed Izad</span>
+            <span>December 24, 2022</span>
+            <span>6 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+      <div class="container">
+        <div class="article-body-inner">
+
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../blog.html">Blog</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>Python for Data Analysis</span>
+          </nav>
+
+          <p>Python is an extremely sophisticated and widely used computer language that is ideal for data processing. It offers several built-in tools and frameworks for data processing, visualization, and machine learning — making it the go-to language for data analysts and scientists worldwide. From exploratory analysis of small spreadsheets to production pipelines processing millions of records, Python's flexibility and depth of ecosystem make it uniquely suited to the full spectrum of modern data work.</p>
+
+          <h2>Why Python for Data Analysis?</h2>
+          <p>Python's ascendancy in data science is no accident. Its design philosophy — emphasising readability, expressiveness, and a low barrier to entry — means that analysts can focus on the problem rather than the syntax. A line of Python code that filters a dataset or fits a regression model closely resembles the plain-English description of what it does, which drastically reduces the cognitive overhead of translating analytical intent into working code. Beyond readability, Python benefits from an extraordinarily rich ecosystem: thousands of open-source libraries cover virtually every analytical need, from statistical modelling to natural language processing, maintained by active communities and backed by major technology organisations. The language is also genuinely cross-disciplinary — the same Python skills that power a bioinformatics pipeline at a research institute are directly transferable to a financial risk model at a bank, making it one of the highest-return technical investments a data practitioner can make.</p>
+
+          <h2>Core Libraries: pandas, NumPy, and Visualisation Tools</h2>
+          <p><strong>pandas</strong> is the cornerstone of tabular data manipulation in Python. Built around the <code>DataFrame</code> — a two-dimensional, column-labelled data structure analogous to a spreadsheet or SQL table — pandas provides intuitive APIs for loading data from CSV, Excel, SQL databases, and JSON, cleaning missing values, reshaping datasets, merging and joining tables, and computing grouped aggregations. Underpinning pandas is <strong>NumPy</strong>, which provides the high-performance multidimensional array (<code>ndarray</code>) that powers numerical computing in Python. NumPy's vectorised operations execute in compiled C code rather than interpreted Python loops, delivering performance that can be orders of magnitude faster for numerical workloads. For communication of findings, <strong>Matplotlib</strong> provides fine-grained control over every element of a plot — axes, ticks, colours, annotations — while its higher-level companion <strong>Seaborn</strong> wraps Matplotlib in a concise, statistically aware API that produces publication-quality statistical graphics — distribution plots, heatmaps, pair plots, and regression visualisations — with minimal boilerplate. Together, these three libraries form a toolkit capable of handling the majority of real-world analytical tasks from raw data ingestion to presentation-ready output.</p>
+
+          <h2>Machine Learning with scikit-learn</h2>
+          <p><strong>scikit-learn</strong> extends Python's analytical reach into predictive modelling and machine learning. Its unified estimator API — every model exposes <code>.fit()</code>, <code>.predict()</code>, and <code>.score()</code> methods — makes it straightforward to swap between algorithms, compare performance, and build ensemble models without rewriting pipeline code. The library covers supervised learning (linear and logistic regression, decision trees, random forests, gradient boosting with XGBoost or LightGBM via compatible APIs, support vector machines), unsupervised learning (k-means clustering, DBSCAN, principal component analysis), and model evaluation (cross-validation, confusion matrices, ROC curves, precision-recall trade-offs). For deep learning workflows, <strong>TensorFlow</strong> and <strong>PyTorch</strong> integrate seamlessly into the same Python environment, allowing practitioners to graduate from classical ML to neural networks within a single, consistent ecosystem. This continuity — the ability to prototype in an interactive Jupyter notebook and then refactor the same code into a production-grade training script — is one of Python's defining advantages over specialised tools that excel in one context but struggle in others.</p>
+
+          <h2>A Practical Data Analysis Workflow</h2>
+          <p>A well-structured Python data analysis workflow typically follows five stages. First, <em>data acquisition</em>: loading raw data from files, APIs, or databases using pandas or libraries such as <code>requests</code>, <code>sqlalchemy</code>, or <code>boto3</code> for cloud storage. Second, <em>exploratory data analysis (EDA)</em>: using <code>df.info()</code>, <code>df.describe()</code>, and Seaborn distribution plots to understand data types, ranges, distributions, and missing-value patterns before committing to any analytical path. Third, <em>data cleaning and feature engineering</em>: handling nulls, encoding categorical variables, normalising numerical features, and constructing domain-informed derived columns that improve model performance. Fourth, <em>modelling or statistical analysis</em>: fitting models with scikit-learn or performing hypothesis tests with <code>scipy.stats</code>, with rigorous cross-validation to avoid overfitting. Fifth, <em>communication</em>: producing clear visualisations in Matplotlib or Seaborn and narrating findings in a Jupyter notebook that serves as a reproducible, shareable analytical record. Mastering this workflow — rather than any single library — is the true skill of a Python data analyst, and it is a skill that translates directly to measurable business and research impact.</p>
+
+          <!-- CTA -->
+          <div class="article-cta reveal">
+            <p>This article was originally published on Medium. Read the full version with code examples and further resources.</p>
+            <a href="https://medium.com/@2019s17581/python-a-powerful-tool-for-data-analysis-fa942d61a848" class="btn btn-primary" target="_blank" rel="noopener">Read on Medium →</a>
+          </div>
+
+          <!-- Author -->
+          <div class="article-author reveal">
+            <div class="article-author-info">
+              <h4>Mohamed Izad</h4>
+              <p>Quality Analyst at Hemas Manufacturing · B.Sc. Molecular Biology &amp; Biotechnology, University of Colombo · Data practitioner and writer on Python, data science, and biotechnology.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+      <div class="container">
+        <p class="section-label">More Articles</p>
+        <div class="blog-grid" style="margin-top: 40px;">
+          <article class="blog-card">
+            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #1a0f00 0%, #2a1800 60%, #1a1000 100%);">
+              <span class="blog-card-tag">AI · NLP</span>
+            </div>
+            <div class="blog-card-body">
+              <p class="blog-card-meta">Jun 7, 2023 &nbsp;·&nbsp; 4 min read</p>
+              <h3>Bard vs ChatGPT: An NLP Comparison</h3>
+              <a href="bard-vs-chatgpt-nlp-comparison.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #001520 0%, #002030 60%, #001020 100%);">
+              <span class="blog-card-tag">AI &amp; Genetics</span>
+            </div>
+            <div class="blog-card-body">
+              <p class="blog-card-meta">Mar 9, 2023 &nbsp;·&nbsp; 5 min read</p>
+              <h3>Artificial Intelligence and Genetics: A New Frontier</h3>
+              <a href="artificial-intelligence-genetics.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Mohamed Izad. Built with precision in Sri Lanka.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
