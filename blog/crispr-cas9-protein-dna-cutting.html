@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" type="image/png" href="../assets/Logo.png">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>How CRISPR-Cas9 Cuts DNA: The Mystery of the Cas9 Enzyme | Mohamed Izad</title>
+  <meta name="description" content="A deep dive into the CRISPR-Cas9 mechanism — how the Cas9 enzyme locates, binds, and precisely cuts DNA sequences, its biological applications, and ethical implications. By Mohamed Izad.">
+  <meta name="keywords" content="CRISPR-Cas9, Cas9 enzyme, DNA cutting mechanism, guide RNA, gene editing mechanism, molecular biology, CRISPR applications, Mohamed Izad">
+  <meta name="author" content="Mohamed Izad">
+  <link rel="canonical" href="https://izad98.github.io/blog/crispr-cas9-protein-dna-cutting.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         content="https://izad98.github.io/blog/crispr-cas9-protein-dna-cutting.html">
+  <meta property="og:title"       content="How CRISPR-Cas9 Cuts DNA: The Mystery of the Cas9 Enzyme">
+  <meta property="og:description" content="How does Cas9 find and cut a single sequence among billions of base pairs? An exploration of the CRISPR-Cas9 mechanism, precision, and ethical dimensions.">
+  <meta property="og:image"       content="https://izad98.github.io/assets/hero-profile.png">
+  <meta property="article:published_time" content="2023-10-21">
+  <meta property="article:author"         content="Mohamed Izad">
+  <meta property="article:tag"            content="CRISPR-Cas9, DNA, Gene Editing, Molecular Biology">
+
+  <!-- Schema.org BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "The Mystery of CRISPR-Cas9 Protein: How Cas9 Enzymes Cut DNA",
+    "description": "An exploration of how CRISPR-Cas9 enables scientists to precisely edit DNA — covering the Cas9 mechanism, guide RNA, PAM sequences, repair pathways, applications, and ethics.",
+    "datePublished": "2023-10-21",
+    "dateModified": "2023-10-21",
+    "url": "https://izad98.github.io/blog/crispr-cas9-protein-dna-cutting.html",
+    "inLanguage": "en",
+    "keywords": "CRISPR-Cas9, Cas9, guide RNA, DNA cutting, gene editing, PAM sequence, molecular biology",
+    "articleSection": "Molecular Biology",
+    "timeRequired": "PT5M",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Izad",
+      "url": "https://izad98.github.io",
+      "jobTitle": "Quality Analyst",
+      "alumniOf": "University of Colombo"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Mohamed Izad",
+      "url": "https://izad98.github.io"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://izad98.github.io/blog/crispr-cas9-protein-dna-cutting.html"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Navigation -->
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <a href="../index.html" class="brand">MI.</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../index.html#about" class="nav-link">About</a></li>
+        <li><a href="../index.html#journey" class="nav-link">Journey</a></li>
+        <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+        <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+        <li><a href="../index.html#awards" class="nav-link">Awards</a></li>
+        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+        <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="article-hero" style="background: linear-gradient(135deg, #00101e 0%, #001e33 60%, #001a28 100%);">
+      <div class="container">
+        <div class="article-hero-content reveal">
+          <span class="article-hero-tag">CRISPR-Cas9 · Molecular Biology · Gene Editing</span>
+          <h1 class="article-hero-title">The Mystery of CRISPR-Cas9: How Cas9 Enzymes Cut DNA</h1>
+          <div class="article-hero-meta">
+            <span>Mohamed Izad</span>
+            <span>October 21, 2023</span>
+            <span>5 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article Body -->
+    <div class="article-body">
+      <div class="container">
+        <div class="article-body-inner">
+
+          <!-- Breadcrumb -->
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../blog.html">Blog</a>
+            <span class="breadcrumb-sep">/</span>
+            <span>CRISPR-Cas9 Mechanism</span>
+          </nav>
+
+          <p>Have you ever wondered how scientists can precisely edit DNA, like the cut-and-paste function in a word processor, but on a microscopic level? The answer lies within a revolutionary gene-editing tool called CRISPR-Cas9. In this article, you will delve into the enigmatic world of CRISPR-Cas9 protein — exploring how it locates, binds, and cuts specific sequences within the genome with remarkable precision.</p>
+
+          <h2>The Origin of CRISPR</h2>
+          <p>CRISPR — Clustered Regularly Interspaced Short Palindromic Repeats — was first identified as part of the bacterial adaptive immune system. When bacteria survive a viral attack, they store fragments of the invader's DNA between these repeats. On re-exposure, the bacteria transcribe these sequences into RNA that guides the Cas9 protein directly to the viral DNA, destroying it. Scientists Jennifer Doudna and Emmanuelle Charpentier, awarded the 2020 Nobel Prize in Chemistry, recognised this machinery could be repurposed as a programmable genome editor.</p>
+
+          <h2>The Two-Component System</h2>
+          <p>CRISPR-Cas9 works through two key molecular players. First, the single guide RNA (sgRNA) — a synthetic fusion of two RNA molecules that provides both a scaffold for Cas9 binding and a ~20-nucleotide targeting sequence complementary to the genomic site of interest. Second, the Cas9 protein itself — a large multidomain endonuclease that carries two nuclease domains (HNH and RuvC), each responsible for cutting one strand of the double-stranded DNA.</p>
+
+          <h2>The Cutting Mechanism</h2>
+          <p>Before cutting, Cas9 must verify the target. The protein first scans the genome for a short sequence called the Protospacer Adjacent Motif (PAM — typically 5'-NGG-3' for the most widely used <em>Streptococcus pyogenes</em> Cas9). On finding a PAM, Cas9 unwinds the local DNA and checks whether the adjacent sequence matches the guide RNA. If it does, a conformational change activates both nuclease domains, producing a blunt-ended double-strand break precisely 3 base pairs upstream of the PAM.</p>
+          <p>This break is not the end of the story. The cell responds with one of two repair pathways: Non-Homologous End Joining (NHEJ), which is error-prone and often introduces small insertions or deletions that disrupt gene function, or Homology-Directed Repair (HDR), which uses a provided DNA template to install a specific sequence change. The choice between these pathways determines whether the edit results in gene knockout or precise correction.</p>
+
+          <h2>Applications Across Biology</h2>
+          <p>Beyond gene therapy, CRISPR-Cas9 has transformed basic research — enabling genome-wide functional screens, the creation of disease models, and the development of diagnostic tools (such as SHERLOCK and DETECTR). In agriculture, CRISPR is being used to develop disease-resistant and climate-resilient crops. In oncology, CAR-T cell therapies enhanced by CRISPR editing are showing early clinical promise.</p>
+
+          <h2>Precision, Limitations, and Ethics</h2>
+          <p>The system is powerful but imperfect. Off-target cuts — where Cas9 edits unintended sites with partial sequence homology — remain a safety concern in clinical applications. Base editing and prime editing technologies have since emerged to reduce double-strand breaks and extend the range of editable mutations. Ethically, the germline editing of human embryos (as controversially performed in 2018) highlights the need for rigorous governance frameworks to accompany this technology's rapid advancement.</p>
+
+          <!-- CTA -->
+          <div class="article-cta reveal">
+            <p>This article was originally published on Medium. Read the full version with additional references and figures.</p>
+            <a href="https://medium.com/@2019s17581/the-mystery-of-crispr-cas9-protein-how-cas9-enzymes-cut-dna-a64f6f302cd9" class="btn btn-primary" target="_blank" rel="noopener">Read on Medium →</a>
+          </div>
+
+          <!-- Author -->
+          <div class="article-author reveal">
+            <div class="article-author-info">
+              <h4>Mohamed Izad</h4>
+              <p>Quality Analyst at Hemas Manufacturing · B.Sc. Molecular Biology &amp; Biotechnology, University of Colombo · Writer on biotechnology and precision science.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Posts -->
+    <section class="related-posts">
+      <div class="container">
+        <p class="section-label">More Articles</p>
+        <div class="blog-grid" style="margin-top: 40px;">
+          <article class="blog-card">
+            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #0b0020 0%, #1a063a 60%, #0e1038 100%);">
+              <span class="blog-card-tag">CRISPR · Gene Therapy</span>
+            </div>
+            <div class="blog-card-body">
+              <p class="blog-card-meta">Feb 27, 2023 &nbsp;·&nbsp; 6 min read</p>
+              <h3>The Use of CRISPR Gene Editing in Treating Genetic Diseases</h3>
+              <a href="crispr-gene-editing-genetic-diseases.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </article>
+          <article class="blog-card">
+            <div class="blog-card-thumb" style="background: linear-gradient(135deg, #001a0a 0%, #00341a 60%, #00151e 100%);">
+              <span class="blog-card-tag">Enzymology · Biofuel</span>
+            </div>
+            <div class="blog-card-body">
+              <p class="blog-card-meta">Aug 1, 2024 &nbsp;·&nbsp; 3 min read</p>
+              <h3>Cellulases: The Unsung Heroes of Biofuel Production</h3>
+              <a href="cellulases-biofuel-production.html" class="blog-read-link">Read Article →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Mohamed Izad. Built with precision in Sri Lanka.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -28,7 +28,8 @@ const loadInterval = setInterval(() => {
 (function initThree() {
   if (typeof THREE === 'undefined') return;
 
-  const canvas   = document.getElementById('canvas');
+  const canvas = document.getElementById('canvas');
+  if (!canvas) return;
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -226,9 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(s => {
       if (window.scrollY >= s.offsetTop - 140) current = s.id;
     });
-    navLinks.forEach(l =>
-      l.classList.toggle('active', l.getAttribute('href') === '#' + current)
-    );
+    if (current) {
+      navLinks.forEach(l =>
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current)
+      );
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
