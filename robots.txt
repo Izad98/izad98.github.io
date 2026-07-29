@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://izad98.github.io/sitemap.xml

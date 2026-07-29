@@ -188,7 +188,7 @@ function triggerViewportReveals() {
 (function initTyping() {
   const el = document.getElementById('typed-text');
   if (!el) return;
-  const phrases = ['Quality Analyst', 'Researcher & Scientist', 'Molecular Biology Graduate'];
+  const phrases = ['Quality Assurance Coordinator', 'Researcher & Scientist', 'Molecular Biology Graduate'];
   let pi = 0, ci = 0, del = false;
 
   function tick() {
