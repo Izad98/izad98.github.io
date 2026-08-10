@@ -3,8 +3,18 @@
 <head>
   <link rel="icon" type="image/png" href="../assets/Logo.png">
   <meta charset="UTF-8">
+  <script>
+    (function () {
+      try {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
 
   <title>How CRISPR-Cas9 Cuts DNA: The Mystery of the Cas9 Enzyme | Mohamed Izad</title>
   <meta name="description" content="A deep dive into the CRISPR-Cas9 mechanism — how the Cas9 enzyme locates, binds, and precisely cuts DNA sequences, its biological applications, and ethical implications. By Mohamed Izad.">
@@ -72,7 +82,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=20260729">
+  <link rel="stylesheet" href="../style.css?v=20260810">
 </head>
 <body>
 <div id="reading-progress"></div>
@@ -85,21 +95,27 @@
   <header class="header scrolled" id="header">
     <nav class="nav container">
       <a href="../index.html" class="brand">MI.</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-        <span class="hamburger"></span>
-        <span class="hamburger"></span>
-      </button>
-      <ul class="nav-menu">
-        <li><a href="../index.html" class="nav-link">Home</a></li>
-        <li><a href="../index.html#about" class="nav-link">About</a></li>
-        <li><a href="../index.html#journey" class="nav-link">Journey</a></li>
-        <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
-        <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
-        <li><a href="../index.html#awards" class="nav-link">Awards</a></li>
-        <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
-        <li><a href="../blog.html" class="nav-link active">Blog</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-menu">
+          <li><a href="../index.html" class="nav-link">Home</a></li>
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#journey" class="nav-link">Journey</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+          <li><a href="../index.html#awards" class="nav-link">Awards</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+          <li><a href="../blog.html" class="nav-link active">Blog</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path></svg>
+        </button>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -207,6 +223,6 @@
     </div>
   </footer>
 
-  <script src="../script.js?v=20260729"></script>
+  <script src="../script.js?v=20260810"></script>
 </body>
 </html>
