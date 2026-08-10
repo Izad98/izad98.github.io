@@ -83,6 +83,17 @@ const loadInterval = setInterval(() => {
   const wire = new THREE.Mesh(wireGeo, wireMat);
   scene.add(wire);
 
+  // Recolour the sphere/wire to stay visible against the page background
+  // when the theme flips (a white sphere would wash out on a light page).
+  function syncSphereTheme() {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+    mat.color.set(isLight ? 0x0a0a0a : 0xffffff);
+    wireMat.color.set(isLight ? 0x0a0a0a : 0xffffff);
+    wireMat.opacity = isLight ? 0.09 : 0.055;
+  }
+  syncSphereTheme();
+  window.addEventListener('themechange', syncSphereTheme);
+
   // Store original positions for per-frame distortion
   const posAttr = geo.attributes.position;
   const orig    = Float32Array.from(posAttr.array);
@@ -269,3 +280,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// ── 8. Theme Toggle — light / dark ──────────
+(function initThemeToggle() {
+  const toggle = document.querySelectorAll('.theme-toggle');
+  if (!toggle.length) return;
+  const root = document.documentElement;
+
+  function currentTheme() {
+    return root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    toggle.forEach(btn => {
+      btn.setAttribute('aria-pressed', theme === 'light' ? 'true' : 'false');
+      btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme');
+    });
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'light' ? '#f7f7f4' : '#050505');
+    window.dispatchEvent(new CustomEvent('themechange', { detail: { theme } }));
+  }
+
+  applyTheme(currentTheme());
+
+  toggle.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const next = currentTheme() === 'light' ? 'dark' : 'light';
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      applyTheme(next);
+    });
+  });
+})();

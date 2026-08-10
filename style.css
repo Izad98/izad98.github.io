@@ -4,13 +4,51 @@
    ============================================= */
 
 :root {
-  --black:  #050505;
-  --white:  #ffffff;
-  --carbon: #1a1a1a;
-  --border: rgba(255, 255, 255, 0.08);
-  --muted:  rgba(255, 255, 255, 0.42);
+  --black:      #050505;
+  --black-rgb:  5, 5, 5;
+  --white:      #ffffff;
+  --white-rgb:  255, 255, 255;
+  --carbon:     #1a1a1a;
+  --border:     rgba(var(--white-rgb), 0.08);
+  --muted:      rgba(var(--white-rgb), 0.42);
+  --surface-hover: #111111;
+  --base-hover:    #0c0c0c;
+  --img-filter:    grayscale(100%) brightness(1.2);
   --font-head: 'Syne', sans-serif;
   --font-body: 'Inter', sans-serif;
+  color-scheme: dark;
+}
+
+/* Light theme — swaps the monochrome token set; component rules never
+   reference black/white literals directly so the whole design flips. */
+:root[data-theme="light"] {
+  --black:      #f7f7f4;
+  --black-rgb:  247, 247, 244;
+  --white:      #0a0a0a;
+  --white-rgb:  10, 10, 10;
+  --carbon:     #ececea;
+  --border:     rgba(var(--white-rgb), 0.1);
+  --muted:      rgba(var(--white-rgb), 0.6);
+  --surface-hover: #e0e0da;
+  --base-hover:    #eeeeea;
+  --img-filter:    grayscale(100%) brightness(0.92);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --black:      #f7f7f4;
+    --black-rgb:  247, 247, 244;
+    --white:      #0a0a0a;
+    --white-rgb:  10, 10, 10;
+    --carbon:     #ececea;
+    --border:     rgba(var(--white-rgb), 0.1);
+    --muted:      rgba(var(--white-rgb), 0.6);
+    --surface-hover: #e0e0da;
+    --base-hover:    #eeeeea;
+    --img-filter:    grayscale(100%) brightness(0.92);
+    color-scheme: light;
+  }
 }
 
 /* ── Reset ─────────────────────────────────── */
@@ -103,7 +141,7 @@ img { max-width: 100%; height: auto; display: block; }
 #cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(var(--white-rgb), 0.45);
   transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
 }
 #cursor-ring.expanded {
@@ -134,7 +172,7 @@ img { max-width: 100%; height: auto; display: block; }
   transition: background 0.4s ease, padding 0.4s ease, border-bottom 0.4s ease;
 }
 .header.scrolled {
-  background: rgba(5, 5, 5, 0.92);
+  background: rgba(var(--black-rgb), 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: 16px 0;
@@ -173,6 +211,39 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--white);
   border-color: var(--border);
 }
+
+/* Right-hand cluster: nav links + theme toggle + mobile hamburger.
+   Kept together so the toggle and hamburger never drift from the menu. */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: none;
+  color: var(--white);
+  cursor: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+.theme-toggle:hover { border-color: var(--white); }
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+}
+.theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: block; }
 
 /* Mobile toggle */
 .nav-toggle {
@@ -308,7 +379,7 @@ body.menu-open::before {
 .scroll-line {
   width: 1px;
   height: 56px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+  background: linear-gradient(to bottom, rgba(var(--white-rgb),0.6), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 @keyframes scrollPulse {
@@ -446,7 +517,7 @@ body.menu-open::before {
   content: '—';
   position: absolute;
   left: 0;
-  color: rgba(255,255,255,0.18);
+  color: rgba(var(--white-rgb),0.18);
 }
 
 /* ── Skills ────────────────────────────────── */
@@ -463,12 +534,12 @@ body.menu-open::before {
   background: var(--carbon);
   transition: background 0.35s;
 }
-.skill-card:hover { background: #111; }
+.skill-card:hover { background: var(--surface-hover); }
 .skill-num {
   font-family: var(--font-head);
   font-size: 0.68rem;
   letter-spacing: 0.22em;
-  color: rgba(255,255,255,0.18);
+  color: rgba(var(--white-rgb),0.18);
   margin-bottom: 24px;
 }
 .skill-card h3 {
@@ -510,9 +581,9 @@ body.menu-open::before {
 }
 .project-card:hover .project-num,
 .project-card:hover .project-meta {
-  color: rgba(0,0,0,0.38);
+  color: rgba(var(--black-rgb),0.38);
 }
-.project-card:hover p { color: rgba(0,0,0,0.58); }
+.project-card:hover p { color: rgba(var(--black-rgb),0.58); }
 
 .project-num {
   display: block;
@@ -552,13 +623,13 @@ body.menu-open::before {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(var(--white-rgb),0.15);
   padding-bottom: 2px;
   transition: color 0.4s, border-color 0.4s;
 }
 .project-card:hover .project-link {
   color: var(--black);
-  border-color: rgba(0,0,0,0.25);
+  border-color: rgba(var(--black-rgb),0.25);
 }
 
 /* ── Awards ────────────────────────────────── */
@@ -574,7 +645,7 @@ body.menu-open::before {
   padding: 40px 32px;
   transition: background 0.35s;
 }
-.award-card:hover { background: #111; }
+.award-card:hover { background: var(--surface-hover); }
 .award-image {
   width: 56px;
   height: 56px;
@@ -585,7 +656,7 @@ body.menu-open::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%) brightness(1.2);
+  filter: var(--img-filter);
   transition: filter 0.4s;
 }
 .award-card:hover .award-image img { filter: none; }
@@ -724,7 +795,7 @@ body.menu-open::before {
   flex-direction: column;
   transition: background 0.4s;
 }
-.blog-card:hover { background: #0c0c0c; }
+.blog-card:hover { background: var(--base-hover); }
 
 /* Thumbnail with real photo */
 .blog-card-thumb {
@@ -759,7 +830,7 @@ body.menu-open::before {
   font-size: 0.58rem;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--white);
+  color: #ffffff;
   border: 1px solid rgba(255,255,255,0.35);
   padding: 4px 12px;
   background: rgba(0,0,0,0.45);
@@ -882,13 +953,16 @@ body.menu-open::before {
   position: relative;
   z-index: 2;
   max-width: 820px;
+  /* Always sits on the darkened photo + gradient above, in both themes —
+     so its text stays light regardless of the page theme. */
+  color: #ffffff;
 }
 .article-hero-tag {
   display: block;
   font-size: 0.68rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(255,255,255,0.6);
   margin-bottom: 24px;
 }
 .article-hero-title {
@@ -899,6 +973,7 @@ body.menu-open::before {
   letter-spacing: -0.03em;
   margin-bottom: 32px;
   overflow-wrap: break-word;
+  color: #ffffff;
 }
 .article-hero-meta {
   display: flex;
@@ -907,7 +982,7 @@ body.menu-open::before {
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(255,255,255,0.6);
 }
 .article-hero-meta span::before {
   content: '·';
@@ -943,7 +1018,7 @@ body.menu-open::before {
 .article-body-inner .article-lead {
   font-size: 1.25rem;
   line-height: 1.75;
-  color: rgba(255,255,255,0.72);
+  color: rgba(var(--white-rgb),0.72);
   margin-bottom: 48px;
   font-weight: 400;
 }
@@ -952,7 +1027,7 @@ body.menu-open::before {
 .article-body-inner p {
   font-size: 1.1rem;
   line-height: 2;
-  color: rgba(255,255,255,0.58);
+  color: rgba(var(--white-rgb),0.58);
   margin-bottom: 36px;
 }
 
@@ -1093,26 +1168,27 @@ body.menu-open::before {
 @media (hover: none) {
   body { cursor: auto; }
   #cursor-dot, #cursor-ring { display: none; }
-  .nav-toggle, .tab-button { cursor: pointer; }
+  .nav-toggle, .tab-button, .theme-toggle { cursor: pointer; }
 
   /* Touch feedback — hover effects never fire on tap, so give cards/buttons
      an explicit pressed state for a responsive, native-app feel. */
   .btn:active { transform: scale(0.96); }
   .btn-primary:active  { background: var(--white); color: var(--black); }
-  .btn-secondary:active { background: rgba(255,255,255,0.12); }
+  .btn-secondary:active { background: rgba(var(--white-rgb),0.12); }
   .project-card:active {
     background: var(--white);
     color: var(--black);
   }
   .project-card:active .project-num,
-  .project-card:active .project-meta { color: rgba(0,0,0,0.38); }
-  .project-card:active p { color: rgba(0,0,0,0.58); }
-  .project-card:active .project-link { color: var(--black); border-color: rgba(0,0,0,0.25); }
-  .skill-card:active, .award-card:active { background: #111; }
+  .project-card:active .project-meta { color: rgba(var(--black-rgb),0.38); }
+  .project-card:active p { color: rgba(var(--black-rgb),0.58); }
+  .project-card:active .project-link { color: var(--black); border-color: rgba(var(--black-rgb),0.25); }
+  .skill-card:active, .award-card:active { background: var(--surface-hover); }
   .award-card:active .award-image img { filter: none; }
   .contact-item:active { padding-left: 12px; }
   .contact-item:active .contact-arrow { transform: translateX(6px); color: var(--white); }
-  .blog-card:active { background: #0c0c0c; }
+  .blog-card:active { background: var(--base-hover); }
   .social-link:active { border-color: var(--white); color: var(--white); }
+  .theme-toggle:active { border-color: var(--white); }
   .nav-toggle:active .hamburger { opacity: 0.6; }
 }
