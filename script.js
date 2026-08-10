@@ -83,17 +83,6 @@ const loadInterval = setInterval(() => {
   const wire = new THREE.Mesh(wireGeo, wireMat);
   scene.add(wire);
 
-  // Recolour the sphere/wire to stay visible against the page background
-  // when the theme flips (a white sphere would wash out on a light page).
-  function syncSphereTheme() {
-    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
-    mat.color.set(isLight ? 0x0a0a0a : 0xffffff);
-    wireMat.color.set(isLight ? 0x0a0a0a : 0xffffff);
-    wireMat.opacity = isLight ? 0.09 : 0.055;
-  }
-  syncSphereTheme();
-  window.addEventListener('themechange', syncSphereTheme);
-
   // Store original positions for per-frame distortion
   const posAttr = geo.attributes.position;
   const orig    = Float32Array.from(posAttr.array);
