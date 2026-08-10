@@ -159,6 +159,15 @@ img { max-width: 100%; height: auto; display: block; }
   height: 100%;
   z-index: -1;
   pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+/* The sphere stays white in both themes (its shading comes from studio
+   lights, not a flat fill) — but a fully-opaque white shape reads as too
+   loud against a light page, so it's dialed back to a faint presence. */
+[data-theme="light"] #canvas { opacity: 0.22; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) #canvas { opacity: 0.22; }
 }
 
 /* ── Navigation ────────────────────────────── */
