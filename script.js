@@ -184,23 +184,6 @@ function triggerViewportReveals() {
   });
 }
 
-// ── 5. Typing Effect ────────────────────────
-(function initTyping() {
-  const el = document.getElementById('typed-text');
-  if (!el) return;
-  const phrases = ['Quality Assurance Coordinator', 'Researcher & Scientist', 'Molecular Biology Graduate'];
-  let pi = 0, ci = 0, del = false;
-
-  function tick() {
-    const p = phrases[pi];
-    el.textContent = del ? p.slice(0, ci--) : p.slice(0, ci++);
-    if (!del && ci > p.length)   { del = true;  setTimeout(tick, 1600); return; }
-    if (del  && ci < 0)          { del = false; pi = (pi + 1) % phrases.length; ci = 0; }
-    setTimeout(tick, del ? 65 : 105);
-  }
-  tick();
-})();
-
 // ── 6. Tab Switching ────────────────────────
 document.querySelectorAll('.tab-button').forEach(btn => {
   btn.addEventListener('click', () => {
@@ -298,6 +281,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const next = currentTheme() === 'light' ? 'dark' : 'light';
       try { localStorage.setItem('theme', next); } catch (e) {}
       applyTheme(next);
+    });
+  });
+})();
+
+// ── 9. Portfolio Filter ─────────────────────
+(function initProjectFilter() {
+  const tabs  = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.project-card');
+  if (!tabs.length || !cards.length) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+      cards.forEach(card => {
+        const categories = (card.dataset.category || '').split(' ');
+        const show = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('is-hidden', !show);
+      });
     });
   });
 })();
