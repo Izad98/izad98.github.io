@@ -57,8 +57,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260810">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260811">
 </head>
 <body>
 
@@ -81,7 +81,7 @@
   <!-- Navigation -->
   <header class="header" id="header">
     <nav class="nav container">
-      <div class="brand">MI.</div>
+      <div class="brand" aria-label="Mohamed Izad">MI</div>
       <div class="nav-right">
         <ul class="nav-menu">
           <li><a href="#hero" class="nav-link">Home</a></li>
@@ -90,8 +90,8 @@
           <li><a href="#skills" class="nav-link">Skills</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#awards" class="nav-link">Awards</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
           <li><a href="blog.html" class="nav-link">Blog</a></li>
+          <li><a href="#contact" class="pill-btn nav-contact">Contact Me</a></li>
         </ul>
         <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
@@ -110,40 +110,73 @@
 
     <!-- ── Hero ────────────────────────────── -->
     <section id="hero" class="hero-section">
-      <div class="hero-content container">
-        <p class="hero-eyebrow reveal">Mohamed Izad — Quality Assurance Coordinator</p>
-        <h1 class="hero-heading reveal">
-          BRIDGING<br>
-          <span class="text-outline">SCIENCE &amp;</span><br>
-          DIGITAL.
-        </h1>
-        <p class="hero-sub reveal">
-          <span id="typed-text"></span><span class="cursor-blink">|</span>
-        </p>
-        <div class="hero-buttons reveal">
-          <a href="https://flowcv.com/resume/v7ti3qr98e" class="btn btn-primary" target="_blank" rel="noopener">My Resume</a>
-          <a href="#projects" class="btn btn-secondary">View Work</a>
+      <div class="hero-photo-panel">
+        <img src="assets/hero-profile.png" alt="Portrait of Mohamed Izad" class="hero-photo">
+      </div>
+      <div class="container hero-content-wrap">
+        <div class="hero-content">
+          <p class="hero-greet reveal">Hi, I am</p>
+          <h1 class="hero-name reveal">Mohamed Izad</h1>
+          <p class="hero-role reveal">Quality Assurance Coordinator<br>Molecular Biology Graduate</p>
+          <span class="zigzag reveal" aria-hidden="true"></span>
+          <div class="hero-social reveal">
+            <a href="https://github.com/Izad98/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/mohamedizad/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 21h-4v-6.75c0-1.06-.19-2.44-1.5-2.44-1.5 0-1.7 1.17-1.7 2.37V21h-4V9h3.88v1.23h.04c.4-.75 1.37-1.54 2.83-1.54 3.03 0 3.59 2 3.59 4.58V21ZM7 21H3V9h4v12ZM5 3a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2Z"/></svg>
+            </a>
+            <a href="https://x.com/izad_ijaz" class="social-link" aria-label="X (Twitter)" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 1 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+          <div class="hero-buttons reveal">
+            <a href="https://flowcv.com/resume/v7ti3qr98e" class="pill-btn filled" target="_blank" rel="noopener">My Resume</a>
+            <a href="#projects" class="pill-btn">View Work</a>
+          </div>
         </div>
       </div>
-      <div class="hero-scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
+    </section>
+
+    <!-- ── Role Banner ─────────────────────── -->
+    <section class="role-banner">
+      <span class="role-watermark" aria-hidden="true">QA</span>
+      <div class="role-banner-content">
+        <h2 class="role-banner-title">Hemas Manufacturing</h2>
+        <p class="role-banner-text">Since April 2026, I coordinate quality assurance across Hemas Manufacturing's third-party sites — turning lab rigour into decision-ready systems. Rated Outstanding at my first evaluation in the role.</p>
+        <a href="#journey" class="role-banner-link">Read More →</a>
       </div>
     </section>
 
     <!-- ── About ───────────────────────────── -->
     <section id="about" class="about-section section">
-      <div class="container">
-        <p class="section-label reveal">[ 01 — About ]</p>
-        <h2 class="section-title reveal">The Philosophy</h2>
-        <div class="about-grid">
-          <div class="about-photo reveal">
-            <img src="assets/hero-profile.png" alt="Portrait of Mohamed Izad">
+      <div class="container about-container">
+        <span class="label-box reveal">About Me</span>
+        <p class="about-big reveal">In manufacturing, quality is binary. In the digital world, it's an experience.</p>
+        <p class="about-body reveal">I'm Mohamed Izad — a Quality Assurance Coordinator at Hemas Manufacturing and a Molecular Biology &amp; Biotechnology graduate from the University of Colombo. I bring the rigour of R&amp;D to every digital challenge I tackle, spanning chemical and microbiological testing, data analysis, and quality systems development. Beyond the lab, I mentor teams, build workflows, and create content that bridges precision science with clear communication.</p>
+        <a href="#skills" class="explore-link reveal"><span>|</span> Explore <span>|</span></a>
+        <span class="zigzag center reveal" aria-hidden="true"></span>
+        <div class="pillars-grid">
+          <div class="pillar-card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6l-5.5 9a1.5 1.5 0 0 0 1.3 2.2h12.4a1.5 1.5 0 0 0 1.3-2.2L14 9V3"/><line x1="8" y1="14" x2="16" y2="14"/></svg>
+              Research
+            </h3>
+            <p>Rigorous, evidence-led investigation — from bacterial cultivation to root-cause analysis on the production floor.</p>
           </div>
-          <div class="about-text">
-            <p class="about-big reveal">In manufacturing, quality is binary. In the digital world, it's an experience.</p>
-            <p class="about-body reveal">I'm Mohamed Izad — a Quality Assurance Coordinator at Hemas Manufacturing and a Molecular Biology &amp; Biotechnology graduate from the University of Colombo. I bring the rigour of R&amp;D to every digital challenge I tackle.</p>
-            <p class="about-body reveal">My expertise spans chemical and microbiological testing, data analysis (Power BI, Python, R), and quality systems development. Beyond the lab, I mentor teams, build workflows, and create content that bridges precision science with clear communication.</p>
+          <div class="pillar-card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg>
+              Quality Systems
+            </h3>
+            <p>SOPs, ICQAs and compliance frameworks that turn quality from a checkpoint into a culture.</p>
+          </div>
+          <div class="pillar-card reveal">
+            <h3>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13a7.97 7.97 0 0 0 0-2l2.1-1.6-2-3.4-2.5 1a8 8 0 0 0-1.7-1L14.9 3h-4l-.4 2.9a8 8 0 0 0-1.7 1l-2.5-1-2 3.4L6.4 11a7.97 7.97 0 0 0 0 2l-2.1 1.6 2 3.4 2.5-1a8 8 0 0 0 1.7 1l.4 2.9h4l.4-2.9a8 8 0 0 0 1.7-1l2.5 1 2-3.4L19.4 13Z"/></svg>
+              Automation
+            </h3>
+            <p>Power BI dashboards, Python scripts and workflows that turn raw data into decisions leadership can act on.</p>
           </div>
         </div>
       </div>
@@ -152,8 +185,7 @@
     <!-- ── Journey ─────────────────────────── -->
     <section id="journey" class="journey-section section">
       <div class="container">
-        <p class="section-label reveal">[ 02 — Journey ]</p>
-        <h2 class="section-title reveal">My Timeline</h2>
+        <span class="label-box reveal">Journey</span>
         <div class="tab-buttons reveal">
           <button class="tab-button active" data-target="experience-tab">Experience</button>
           <button class="tab-button" data-target="education-tab">Education</button>
@@ -255,46 +287,77 @@
     <!-- ── Skills ──────────────────────────── -->
     <section id="skills" class="skills-section section">
       <div class="container">
-        <p class="section-label reveal">[ 03 — Skills ]</p>
-        <h2 class="section-title reveal">Technical Arsenal</h2>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <div class="skill-num">01</div>
-            <h3>Python &amp; R</h3>
-            <p>Data analysis, automation and statistical computing.</p>
+        <span class="label-box reveal">Skills</span>
+
+        <p class="skills-subhead reveal">Tools &amp; Technologies</p>
+        <div class="icon-grid reveal">
+          <div class="icon-badge">
+            <span class="icon-badge-mark"><svg viewBox="0 0 24 24" fill="#3776AB"><path d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></svg></span>
+            <span>Python</span>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">02</div>
-            <h3>Web &amp; Automation</h3>
-            <p>HTML, CSS, JavaScript, Power Apps &amp; Power Automate.</p>
+          <div class="icon-badge">
+            <span class="icon-badge-mark"><svg viewBox="0 0 24 24" fill="#276DC3"><path d="M12 2.746c-6.627 0-12 3.599-12 8.037 0 3.897 4.144 7.144 9.64 7.88V16.26c-2.924-.915-4.925-2.755-4.925-4.877 0-3.035 4.084-5.494 9.12-5.494 5.038 0 8.757 1.683 8.757 5.494 0 1.976-.999 3.379-2.662 4.272.09.066.174.128.258.216.169.149.25.363.372.544 2.128-1.45 3.44-3.437 3.44-5.631 0-4.44-5.373-8.038-12-8.038zm-2.111 4.99v13.516l4.093-.002-.002-5.291h1.1c.225 0 .321.066.549.25.272.22.715.982.715.982l2.164 4.063 4.627-.002-2.864-4.826s-.086-.193-.265-.383a2.22 2.22 0 00-.582-.416c-.422-.214-1.149-.434-1.149-.434s3.578-.264 3.578-3.826c0-3.562-3.744-3.63-3.744-3.63zm4.127 2.93l2.478.002s1.149-.062 1.149 1.127c0 1.165-1.149 1.17-1.149 1.17h-2.478zm1.754 6.119c-.494.049-1.012.079-1.54.088v1.807a16.622 16.622 0 002.37-.473l-.471-.891s-.108-.183-.248-.394c-.039-.054-.08-.098-.111-.137z"/></svg></span>
+            <span>R</span>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">03</div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark"><svg viewBox="0 0 24 24" fill="#E34F26"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></span>
+            <span>HTML5</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark"><svg viewBox="0 0 24 24" fill="#F7DF1E"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"/></svg></span>
+            <span>JavaScript</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark" style="color:#F2C811"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="20" x2="20" y2="20"/><rect x="6" y="14" width="3" height="6"/><rect x="11" y="9" width="3" height="11"/><rect x="16" y="4" width="3" height="16"/></svg></span>
+            <span>Power BI</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark" style="color:#217346"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="1"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="4" y1="16" x2="20" y2="16"/><line x1="10.5" y1="4" x2="10.5" y2="20"/></svg></span>
+            <span>Excel</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark"><svg viewBox="0 0 24 24" fill="#4479A1"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 00-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 00-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135l-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 00.3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 00-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 00-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 00-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 00-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 01-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 01-.35-.4 8.76 8.76 0 01-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 01-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 012.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg></span>
+            <span>SQL</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark" style="color:#0066FF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 14-5.2M20 4v4h-4"/><path d="M20 12a8 8 0 0 1-14 5.2M4 20v-4h4"/></svg></span>
+            <span>Power Automate</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark" style="color:#742774"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><line x1="9" y1="18" x2="15" y2="18"/></svg></span>
+            <span>Power Apps</span>
+          </div>
+          <div class="icon-badge">
+            <span class="icon-badge-mark"><svg viewBox="0 0 24 24" fill="#181717"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span>
+            <span>Git &amp; GitHub</span>
+          </div>
+        </div>
+
+        <span class="zigzag reveal" aria-hidden="true"></span>
+
+        <p class="skills-subhead reveal">Core Competencies</p>
+        <div class="skills-grid reveal">
+          <div class="skill-card">
             <h3>Molecular Techniques</h3>
             <p>DNA extraction, PCR, cloning, blotting &amp; microbial assays.</p>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">04</div>
+          <div class="skill-card">
             <h3>Chemical Testing</h3>
             <p>pH, conductivity, viscosity, tensile strength &amp; assay analyses.</p>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">05</div>
+          <div class="skill-card">
             <h3>Business Analytics</h3>
-            <p>Power BI, Excel, SQL and dashboard creation for data-driven insights.</p>
+            <p>Dashboard creation and data storytelling for data-driven insights.</p>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">06</div>
+          <div class="skill-card">
             <h3>Leadership &amp; HR</h3>
             <p>Team management, stakeholder communication &amp; HR operations.</p>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">07</div>
+          <div class="skill-card">
             <h3>Critical Thinking</h3>
             <p>Innovation, problem-solving and process optimisation.</p>
           </div>
-          <div class="skill-card reveal">
-            <div class="skill-num">08</div>
+          <div class="skill-card">
             <h3>Lab Management</h3>
             <p>5S implementation, Kaizen practices and SOP development.</p>
           </div>
@@ -303,38 +366,44 @@
     </section>
 
     <!-- ── Projects ────────────────────────── -->
-    <section id="projects" class="projects-section section">
-      <div class="container">
-        <p class="section-label reveal">[ 04 — Projects ]</p>
-        <p class="projects-count reveal">Selected Works (05)</p>
+    <section id="projects" class="projects-section">
+      <img src="https://images.pexels.com/photos/8443070/pexels-photo-8443070.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" class="projects-bg" aria-hidden="true" loading="lazy">
+      <div class="container projects-container">
+        <span class="label-box on-dark reveal">Projects</span>
+        <div class="filter-tabs reveal">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="research">Research</button>
+          <button class="filter-tab" data-filter="web">Web Dev</button>
+          <button class="filter-tab" data-filter="ml">Machine Learning</button>
+        </div>
         <div class="projects-grid">
-          <div class="project-card reveal">
+          <div class="project-card reveal" data-category="research">
             <span class="project-num">01</span>
             <h3>Isolation, Characterization &amp; Modification of Cellulase-Producing Bacteria</h3>
             <p class="project-meta">Research · Nov 2023 – May 2024</p>
             <p>Investigating cellulase-producing bacterial species to enhance industrial enzyme production for biodegradable detergents. Collaborated with SLIBTEC to optimise cultivation and enzyme yields.</p>
           </div>
-          <div class="project-card reveal">
+          <div class="project-card reveal" data-category="research">
             <span class="project-num">02</span>
             <h3>Isolation &amp; Identification of <em>Monascus</em> Fungal Species</h3>
             <p class="project-meta">Research · Jan 2023 – Jul 2023</p>
             <p>Explored traditional Sri Lankan rice varieties to isolate and identify <em>Monascus</em> fungi. Assessed pigmentation and metabolic profiles with potential applications in food biotechnology.</p>
           </div>
-          <div class="project-card reveal">
+          <div class="project-card reveal" data-category="web">
             <span class="project-num">03</span>
             <h3>Project Microbio</h3>
             <p class="project-meta">Public Education · Aug 2021 – Dec 2021</p>
             <p>Focused on studying and educating the general public about microorganisms during the COVID-19 pandemic situation.</p>
             <a href="https://microbio.netlify.app" class="project-link" target="_blank" rel="noopener">microbio.netlify.app →</a>
           </div>
-          <div class="project-card reveal">
+          <div class="project-card reveal" data-category="web ml">
             <span class="project-num">04</span>
             <h3>Project HealthLab</h3>
             <p class="project-meta">Web Development · Sep 2021 – Nov 2021</p>
             <p>A website developed to predict strokes in heart patients using machine learning models.</p>
             <a href="https://github.com/Izad98/HealthLab.git" class="project-link" target="_blank" rel="noopener">GitHub →</a>
           </div>
-          <div class="project-card reveal">
+          <div class="project-card reveal" data-category="ml">
             <span class="project-num">05</span>
             <h3>SVM Modelling — Employee Attrition Prediction</h3>
             <p class="project-meta">Machine Learning · Jun 2021 – Sep 2021</p>
@@ -342,14 +411,14 @@
             <a href="https://github.com/Izad98/SVM_modelling.git" class="project-link" target="_blank" rel="noopener">GitHub →</a>
           </div>
         </div>
+        <p class="projects-more reveal">And more to come.</p>
       </div>
     </section>
 
     <!-- ── Awards ──────────────────────────── -->
     <section id="awards" class="awards-section section">
       <div class="container">
-        <p class="section-label reveal">[ 05 — Recognition ]</p>
-        <h2 class="section-title reveal">Achievements</h2>
+        <span class="label-box reveal">Awards</span>
         <div class="tab-buttons reveal">
           <button class="tab-button active" data-target="awards-tab">Awards</button>
           <button class="tab-button" data-target="certifications-tab">Certifications</button>
@@ -429,10 +498,10 @@
 
     <!-- ── Contact ─────────────────────────── -->
     <section id="contact" class="contact-section section">
-      <div class="container">
-        <p class="section-label reveal">[ 06 — Contact ]</p>
-        <h2 class="section-title reveal">The Handshake.</h2>
+      <div class="container contact-container">
+        <span class="label-box reveal">Contact</span>
         <p class="contact-intro reveal">Ready to elevate quality together? Reach out below.</p>
+        <span class="zigzag center reveal" aria-hidden="true"></span>
         <div class="contact-list">
           <a href="mailto:izad.ijaz.98@gmail.com" class="contact-item reveal">
             <span class="contact-label">Email</span>
@@ -468,11 +537,26 @@
 
   <footer class="footer">
     <div class="container footer-container">
-      <p>&copy; 2026 Mohamed Izad. Built with precision in Sri Lanka.</p>
+      <a href="#hero" class="back-to-top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+        Back to Top
+      </a>
+      <div class="social-links footer-social">
+        <a href="https://github.com/Izad98/" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/mohamedizad/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 21h-4v-6.75c0-1.06-.19-2.44-1.5-2.44-1.5 0-1.7 1.17-1.7 2.37V21h-4V9h3.88v1.23h.04c.4-.75 1.37-1.54 2.83-1.54 3.03 0 3.59 2 3.59 4.58V21ZM7 21H3V9h4v12ZM5 3a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2Z"/></svg>
+        </a>
+        <a href="mailto:izad.ijaz.98@gmail.com" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Mohamed Izad. Built with precision in Sri Lanka.</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
-  <script src="script.js?v=20260810"></script>
+  <script src="script.js?v=20260811"></script>
 </body>
 </html>
